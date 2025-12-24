@@ -3,24 +3,27 @@ class BankAccount {
     BankAccount(String acC12345, int par) {
     }
 
-//Private variables:
+    //Private variables
     private String accountNumber;
     private double balance;
 
+    //Create New acc
     public void setAccount(String accNo, double amount) {
         accountNumber = accNo;
         balance = amount;
     }
     
-//Getter method to check balance
+    //Getter method to check balance
     public double getBalance() {
         return balance;
     }
 
+    //Deposit
     public void deposit(double amount) {
         balance = balance + amount;
     }
 
+    //Withdraw
     public void withdraw(double amount) {
         if (amount > balance) {
             System.out.println("Insufficient balance");
